@@ -5,7 +5,7 @@ if (navigator.geolocation) {
         let long = position.coords.longitude;
         let lat = position.coords.latitude;
 
-        const queryUrlCityName = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=5b24cae96a98f68f0e09599b72878057`;
+        const queryUrlCityName = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=5b24cae96a98f68f0e09599b72878057`;
 
         fetch(queryUrlCityName)
             .then(response => {
