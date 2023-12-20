@@ -37,16 +37,20 @@ if (navigator.geolocation) {
                         console.log(`Current date is: ${currentDate}`);
 
                         const currentTemp = data.current.temperature_2m;
-                        console.log(`Current temperature is: ${currentTemp} °C`);
+                        const userTemp = $('.userTemp');
+                        userTemp.text(`Current temperature is: ${currentTemp} °C`);
 
                         const currentWeatherCode = data.current.weather_code;
-                        console.log(`Current weather code is: ${currentWeatherCode}`);
+                        const userWeatherCode = $('.userWeatherCode');
+                        userWeatherCode.text(`Current weather code is: ${currentWeatherCode}`);
 
                         const currentHumidity = data.current.relative_humidity_2m;
-                        console.log(`Current humidity is: ${currentHumidity}`);
+                        const userHumidity = $('.userHumidity');
+                        userHumidity.text(`Current humidity is: ${currentHumidity}%`);
 
                         const currentWindSpeed = data.current.wind_speed_10m;
-                        console.log(`Current wind speed is: ${currentWindSpeed} m / s`);
+                        const userWind = $('.userWind');
+                        userWind.text(`Current wind speed is: ${currentWindSpeed} m / s`);
 
                         let middayArray = [];
 
