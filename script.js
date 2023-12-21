@@ -27,7 +27,8 @@ function getWeather() {
                         .then(data => {
 
                             const currentDate = dayjs().format('D/MM/YYYY');
-                            console.log(`Current date is: ${currentDate}`);
+                            const userDate = $('.userDate');
+                            userDate.text(currentDate);
 
                             const currentTemp = data.current.temperature_2m;
                             const userTemp = $('.userTemp');
